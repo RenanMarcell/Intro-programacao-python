@@ -5,12 +5,12 @@ if __name__ == '__main__':
         print("Digite uma opção válida [w/r]: ")
         opcao = input('Deseja escrever ou ler o arquivo: ')
     if opcao == 'r':
-        arquivo = open(nome, 'r')
+        arquivo = open('files/{}'.format(nome), 'r')
         for linha in arquivo.readlines():
             print(linha)
-    elif opcao == 'w':
-        arquivo = open(nome, 'w')
-        for linha in range(1, 11):
+    else:
+        arquivo = open('files/{}'.format(nome), 'w')
+        for linha in range(1, 1001):
             arquivo.write('%d\n' % linha)
 
     arquivo.close()
