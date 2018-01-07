@@ -2,6 +2,7 @@ from clientes import Cliente
 from contas import Conta
 from banco import Banco
 from contaespecial import ContaEspecial
+from nome import Nome
 
 
 if __name__ == '__main__':
@@ -15,6 +16,7 @@ if __name__ == '__main__':
     tatu.abre_conta(contaJM)
     tatu.abre_conta(contaJ)
     tatu.abre_conta(contaE)
-    contaE.saque(1450)
-    tatu.lista_contas()
-
+    A = Nome("Nilo Menezes")
+    print(A._Nome__chave)
+    A._Nome__chave = 'oi'
+    print(A._Nome__chave)
